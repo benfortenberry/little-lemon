@@ -1,0 +1,48 @@
+html, body{
+  font-family: sans-serif;
+  background-color: #495E57;
+  color: #f1f1f1;
+}
+
+.app-logo{
+  width: 50vmin
+}
+
+h1{
+  color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  background-color: #F4CE14;
+  border-radius: 5px;
+
+}
+
+li{
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+li a{
+  color: #495E57;
+  text-decoration: none;
+}
+
+li a:hover{
+  color: #111;
+}
+
+.button-primary{
+  background-color: #F4CE14 !important;
+  border-color: #F4CE14 !important;
+  color:#111 !important
+
+}
