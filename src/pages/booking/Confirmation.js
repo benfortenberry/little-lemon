@@ -1,11 +1,20 @@
+import { DateTime } from 'luxon';
+
 function Confirmation({ reservationInfo }) {
+  const formattedDate = (date, format) => {
+    return DateTime.fromFormat(date, format, { zone: 'utc' })
+      .toLocal()
+      .toFormat('MM/dd/yyyy');
+  };
+
   return (
     <section>
       <h4>We'll see you soon {reservationInfo.firstName}! </h4>
       <p></p>
       <p>
         {' '}
-        Table successfully booked for {reservationInfo.date} for{' '}
+        Table successfully booked for{' '}
+        {formattedDate(reservationInfo.date, 'yyyy-MM-dd')} for{' '}
         {reservationInfo.guests} people at {reservationInfo.time}
       </p>
 
