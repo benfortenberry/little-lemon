@@ -42,10 +42,8 @@ function Details({ submitData, goBack }) {
               return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                setSubmitting(false);
-                submitData(values);
-              }, 2000);
+              setSubmitting(false);
+              submitData(values);
             }}
           >
             {({ isSubmitting }) => (
@@ -56,6 +54,7 @@ function Details({ submitData, goBack }) {
                   className='u-full-width'
                   type='text'
                   name='firstName'
+                  id='firstName'
                 />
                 <ErrorMessage
                   className='form-error'
@@ -68,6 +67,7 @@ function Details({ submitData, goBack }) {
                   className='u-full-width'
                   type='text'
                   name='lastName'
+                  id='lastName'
                 />
                 <ErrorMessage
                   className='form-error'
@@ -80,6 +80,7 @@ function Details({ submitData, goBack }) {
                   className='u-full-width'
                   type='text'
                   name='phoneNumber'
+                  id='phoneNumber'
                 />
                 <ErrorMessage
                   className='form-error'
@@ -92,6 +93,7 @@ function Details({ submitData, goBack }) {
                   className='u-full-width'
                   type='email'
                   name='emailAddress'
+                  id='emailAddress'
                 />
                 <ErrorMessage
                   className='form-error'
@@ -108,6 +110,7 @@ function Details({ submitData, goBack }) {
                 </button>
                 <button
                   type='submit'
+                  data-testid='submit-button'
                   className='button button-primary'
                   disabled={isSubmitting}
                 >

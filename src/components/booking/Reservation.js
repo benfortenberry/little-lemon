@@ -31,10 +31,8 @@ function Reservation({ availableTimes, dispatchOnDateChange, submitData }) {
               return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                setSubmitting(false);
-                submitData(values);
-              }, 2000);
+              setSubmitting(false);
+              submitData(values);
             }}
           >
             {({ isSubmitting }) => (
@@ -42,6 +40,7 @@ function Reservation({ availableTimes, dispatchOnDateChange, submitData }) {
                 <label htmlFor='guests'># Guests</label>
                 <Field
                   name='guests'
+                  id='guests'
                   component='select'
                   className='u-full-width'
                 >
@@ -64,6 +63,7 @@ function Reservation({ availableTimes, dispatchOnDateChange, submitData }) {
                   className='u-full-width'
                   type='date'
                   name='date'
+                  id='date'
                   onBlur={handleDateChange}
                 />
                 <ErrorMessage
@@ -72,7 +72,12 @@ function Reservation({ availableTimes, dispatchOnDateChange, submitData }) {
                   component='div'
                 />
                 <label htmlFor='time'>Time</label>
-                <Field name='time' component='select' className='u-full-width'>
+                <Field
+                  name='time'
+                  component='select'
+                  id='time'
+                  className='u-full-width'
+                >
                   <option> Select a time</option>
                   {availableTimes.map((times) => (
                     <option data-testid='booking-time-option' key={times}>
@@ -90,6 +95,7 @@ function Reservation({ availableTimes, dispatchOnDateChange, submitData }) {
                 </label>
                 <Field
                   name='occasion'
+                  id='occasion'
                   component='select'
                   className='u-full-width'
                 >

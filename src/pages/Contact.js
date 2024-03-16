@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/fontawesome-free-solid';
+import { submitAPI } from '../utils/fakeAPI.js';
 function Contact() {
   return (
     <section>
@@ -24,32 +25,28 @@ function Contact() {
               return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
+                submitAPI(values);
                 setSubmitting(false);
-              }, 1000);
             }}
           >
             {({ isSubmitting }) => (
               <Form>
-                <label htmlFor='email'>Email</label>
+                <label htmlFor='email-address'>Email</label>
                 <Field
                   placeholder='Your Email'
                   className='u-full-width'
                   type='email'
                   name='email'
+                  id='email-address'
                 />
-                <ErrorMessage
-                  className='form-error'
-                  name='email'
-                  component='div'
-                />
-                <label htmlFor='email'>Message</label>
+                <ErrorMessage className='form-error' name='email' component='div' />
+                <label htmlFor='message'>Message</label>
                 <Field
                   component='textarea'
                   rows='4'
                   className='u-full-width'
                   name='message'
+                  id='message'
                 />
                 <ErrorMessage
                   className='form-error'

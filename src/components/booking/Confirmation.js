@@ -8,8 +8,8 @@ function Confirmation({ reservationInfo }) {
   };
 
   return (
-    <section>
-      <h4>We'll see you soon {reservationInfo.firstName}! </h4>
+    <section data-testid="confirmation-text" >
+      <h4 >We'll see you soon {reservationInfo.firstName}! </h4>
       <p></p>
       <p>
         {' '}
