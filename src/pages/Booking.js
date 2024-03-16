@@ -1,7 +1,7 @@
 import { useReducer, useState, useEffect } from 'react';
-import Reservation from '../pages/booking/Reservation.js';
-import Details from '../pages/booking/Details.js';
-import Confirmation from '../pages/booking/Confirmation.js';
+import Reservation from '../components/booking/Reservation.js';
+import Details from '../components/booking/Details.js';
+import Confirmation from '../components/booking/Confirmation.js';
 import { fetchAPI, submitAPI } from '../utils/fakeAPI.js';
 
 const updateTimes = (availableTimes, date) => {
