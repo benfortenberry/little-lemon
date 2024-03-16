@@ -1,25 +1,24 @@
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLemon } from '@fortawesome/fontawesome-free-solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLemon } from '@fortawesome/fontawesome-free-solid';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header className='App-header'>
-       <h1>
-       <FontAwesomeIcon icon={faLemon} /> &nbsp;
-        
-        Little Lemon</h1>
-      
+      <h1>
+        <FontAwesomeIcon icon={faLemon} /> &nbsp; little lemon
+      </h1>
+
       <nav>
         <ul>
           <li>
-            <a href=''>Home</a>
+            <Link to={`/`}>HOME</Link>
           </li>
           <li>
-            <a href=''>About</a>
+            <Link to={`about`}>ABOUT</Link>
           </li>
           <li>
-            <a href=''>Contact</a>
+            <Link to={`contact`}>CONTACT</Link>
           </li>
         </ul>
       </nav>
