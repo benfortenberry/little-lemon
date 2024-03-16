@@ -39,7 +39,11 @@ function Contact() {
                   type='email'
                   name='email'
                 />
-                <ErrorMessage className='form-error' name='email' component='div' />
+                <ErrorMessage
+                  className='form-error'
+                  name='email'
+                  component='div'
+                />
                 <label htmlFor='email'>Message</label>
                 <Field
                   component='textarea'

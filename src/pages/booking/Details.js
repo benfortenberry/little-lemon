@@ -5,10 +5,9 @@ import {
   faArrowRight,
 } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-function Details({submitData, goBack}) {
-
+function Details({ submitData, goBack }) {
   const handleGoBack = (e) => {
-   goBack();
+    goBack();
   };
 
   return (
@@ -63,7 +62,7 @@ function Details({submitData, goBack}) {
                   name='firstName'
                   component='div'
                 />
-                 <label htmlFor='lastName'>Last Name</label>
+                <label htmlFor='lastName'>Last Name</label>
                 <Field
                   placeholder='Last Name'
                   className='u-full-width'
@@ -75,7 +74,7 @@ function Details({submitData, goBack}) {
                   name='lastName'
                   component='div'
                 />
-                 <label htmlFor='phoneNumber'>Phone Number</label>
+                <label htmlFor='phoneNumber'>Phone Number</label>
                 <Field
                   placeholder='Phone Number'
                   className='u-full-width'
@@ -87,7 +86,7 @@ function Details({submitData, goBack}) {
                   name='phoneNumber'
                   component='div'
                 />
-                 <label htmlFor='emailAddress'>Email Address</label>
+                <label htmlFor='emailAddress'>Email Address</label>
                 <Field
                   placeholder='Email Address'
                   className='u-full-width'
@@ -100,15 +99,19 @@ function Details({submitData, goBack}) {
                   component='div'
                 />
                 <br /> <br />
-                <button  onClick={handleGoBack} type='button' className='button mr-3 '>
-                  <FontAwesomeIcon icon={faArrowLeft} /> Cancel
+                <button
+                  onClick={handleGoBack}
+                  type='button'
+                  className='button mr-3 '
+                >
+                  <FontAwesomeIcon icon={faArrowLeft} /> Back
                 </button>
                 <button
                   type='submit'
                   className='button button-primary'
                   disabled={isSubmitting}
                 >
-                  Next <FontAwesomeIcon icon={faArrowRight} />
+                  Finish <FontAwesomeIcon icon={faArrowRight} />
                 </button>{' '}
                 &nbsp;
                 {isSubmitting && <FontAwesomeIcon icon={faSpinner} spin />}

@@ -48,7 +48,8 @@ li a:hover {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.button, .button:hover {
+.button,
+.button:hover {
   background-color: #f1f1f1;
   border-color: #f1f1f1;
   color: #111 !important;
@@ -90,7 +91,7 @@ textarea {
   margin-bottom: 0 !important;
 }
 
-h4{
+h4 {
   margin-bottom: 0;
 }
 

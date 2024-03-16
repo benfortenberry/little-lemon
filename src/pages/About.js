@@ -24,8 +24,6 @@ function About() {
             Pie lemon drops fruitcake sweet topping chocolate cake dessert
             cotton candy bonbon.
           </p>
-
-        
         </div>
         <div className='five columns'>
           <img src='eating.jpg' alt='eating' className='u-max-full-width' />

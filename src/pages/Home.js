@@ -19,10 +19,9 @@ function Home() {
             Chard strip steak bresaola Sweet Potatoes pancetta frankfurter Sweet
             Potato Collard Greens Mushrooms. Carrots fine dining tri-tip,
             Cabbage Broccoli Garlic Daikon Radish Arugula Butternut Squash.
-            
           </p>
           <p>
-          Ground round Celery filet mignon Watercress beef ribs lobster Onions
+            Ground round Celery filet mignon Watercress beef ribs lobster Onions
             cucumber Butternut Squash frankfurter boudin Crookneck Squash
             Eggplant. Mustard Greens fine dining flank corned beef pork loin
             shank. Sirloin Rutabaga corned beef Watercress, ham ground round
@@ -30,7 +29,7 @@ function Home() {
             tenderloin beef.
           </p>
           <Link className='button button-primary' to={`reservation`}>
-            Book a table  <FontAwesomeIcon icon={faArrowRight} />
+            Book a table <FontAwesomeIcon icon={faArrowRight} />
           </Link>
         </div>
 
